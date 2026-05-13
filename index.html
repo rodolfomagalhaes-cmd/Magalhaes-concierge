@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Magalhães Viagens</title>
+<title>Magalhães Viagens by Nanda</title>
 
 <style>
 
 body{
 margin:0;
+padding:0;
 font-family:Arial, sans-serif;
-background:#f6f3eb;
-color:#222;
+background:#f8f5ef;
+color:#1d1d1d;
 }
 
-header{
-padding:40px 20px 20px;
+.container{
+max-width:900px;
+margin:auto;
+padding:30px 20px 120px;
+}
+
+.header{
 text-align:center;
+margin-bottom:30px;
 }
 
 .logo{
 width:180px;
+max-width:80%;
 margin:auto;
 display:block;
 }
 
 .by{
+margin-top:8px;
 font-size:13px;
 letter-spacing:4px;
-margin-top:8px;
 color:#777;
 }
 
 .search{
-width:90%;
-max-width:900px;
-margin:20px auto;
-display:block;
-padding:18px;
+width:100%;
+padding:18px 22px;
 border:none;
 border-radius:18px;
 font-size:16px;
+box-sizing:border-box;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-.container{
-width:90%;
-max-width:900px;
-margin:auto;
-padding-bottom:120px;
+margin-bottom:24px;
 }
 
 .card{
@@ -59,23 +57,25 @@ background:white;
 border-radius:22px;
 padding:24px;
 margin-bottom:18px;
-box-shadow:0 2px 12px rgba(0,0,0,0.05);
+box-shadow:0 2px 10px rgba(0,0,0,0.03);
 cursor:pointer;
-transition:0.3s;
+transition:0.2s;
 }
 
 .card:hover{
-transform:scale(1.01);
+transform:translateY(-2px);
 }
 
 .card h2{
 margin:0;
-font-size:24px;
+font-size:28px;
 }
 
 .card p{
-margin-top:8px;
-color:#777;
+margin-top:10px;
+font-size:15px;
+color:#666;
+line-height:1.5;
 }
 
 .whatsapp{
@@ -88,6 +88,8 @@ padding:16px 22px;
 border-radius:999px;
 text-decoration:none;
 font-weight:bold;
+font-size:14px;
+box-shadow:0 5px 20px rgba(0,0,0,0.25);
 }
 
 </style>
@@ -95,48 +97,73 @@ font-weight:bold;
 
 <body>
 
-<header>
+<div class="container">
 
-<img class="logo" src="logo.PNG">
+<div class="header">
+
+<img src="logo.PNG" class="logo">
 
 <div class="by">
 BY NANDA
 </div>
 
-</header>
+</div>
 
-<input class="search" placeholder="Buscar restaurantes, parques, hotéis...">
-
-<div class="container">
+<input 
+type="text" 
+class="search" 
+placeholder="Buscar restaurantes, parques, hotéis..."
+>
 
 <div class="card">
 <h2>🏨 Hotel</h2>
-<p>Veja informações, fotos e localização do seu hotel.</p>
+<p>
+Veja informações, fotos e localização do seu hotel.
+</p>
 </div>
 
 <div class="card">
 <h2>🍽 Restaurantes</h2>
-<p>Melhores restaurantes selecionados para sua viagem.</p>
+<p>
+Melhores restaurantes selecionados para sua viagem.
+</p>
 </div>
 
 <div class="card">
 <h2>🛍 Compras</h2>
-<p>Shoppings, outlets e lojas recomendadas.</p>
+<p>
+Shoppings, outlets e lojas recomendadas.
+</p>
 </div>
 
 <div class="card">
 <h2>🎢 Parques</h2>
-<p>Dicas completas dos parques e atrações.</p>
+<p>
+Ingressos, horários e dicas dos parques.
+</p>
 </div>
 
 <div class="card">
-<h2>✨ Passeios</h2>
-<p>Passeios especiais e experiências exclusivas.</p>
+<h2>☕ Cafés</h2>
+<p>
+Cafeterias especiais e experiências locais.
+</p>
+</div>
+
+<div class="card">
+<h2>📍 Dicas da Nanda</h2>
+<p>
+Recomendações exclusivas para aproveitar melhor sua viagem.
+</p>
 </div>
 
 </div>
 
-<a class="whatsapp" href="https://wa.me/5531993627389">
+<a 
+class="whatsapp" 
+href="https://wa.me/5531993627389"
+target="_blank"
+>
 WhatsApp Concierge
 </a>
 
