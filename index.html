@@ -1,81 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Magalhães Viagens by Nanda</title>
 
 <style>
 
-body{
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+}
+
+body{
 font-family:Arial, sans-serif;
-background:#f8f5ef;
-color:#1d1d1d;
+background:#f6f4ef;
+color:#1a1a1a;
+padding:20px;
 }
 
 .container{
 max-width:900px;
 margin:auto;
-padding:30px 20px 120px;
 }
 
-.header{
+.topo{
 text-align:center;
-margin-bottom:30px;
+margin-top:20px;
+margin-bottom:35px;
 }
 
 .logo{
-width:180px;
-max-width:80%;
-margin:auto;
-display:block;
+width:170px;
+margin-bottom:10px;
 }
 
 .by{
-margin-top:8px;
-font-size:13px;
 letter-spacing:4px;
+font-size:13px;
 color:#777;
+margin-bottom:20px;
+}
+
+.slogan{
+font-size:15px;
+color:#666;
+margin-bottom:25px;
+}
+
+.familia-box{
+background:white;
+padding:25px;
+border-radius:24px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:25px;
+margin-bottom:35px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+flex-wrap:wrap;
+}
+
+.familia-img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #f2f2f2;
+}
+
+.familia-texto h1{
+font-size:32px;
+margin-bottom:8px;
+}
+
+.familia-texto h2{
+font-size:20px;
+margin-bottom:8px;
+color:#444;
+}
+
+.familia-texto p{
+color:#666;
+line-height:1.5;
 }
 
 .search{
 width:100%;
-padding:18px 22px;
+padding:18px;
 border:none;
 border-radius:18px;
+margin-bottom:25px;
 font-size:16px;
-box-sizing:border-box;
 background:white;
-margin-bottom:24px;
+box-shadow:0 3px 10px rgba(0,0,0,0.04);
 }
 
 .card{
 background:white;
-border-radius:22px;
-padding:24px;
-margin-bottom:18px;
-box-shadow:0 2px 10px rgba(0,0,0,0.03);
-cursor:pointer;
-transition:0.2s;
-}
-
-.card:hover{
-transform:translateY(-2px);
+padding:25px;
+border-radius:24px;
+margin-bottom:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .card h2{
-margin:0;
-font-size:28px;
+margin-bottom:10px;
+font-size:30px;
 }
 
 .card p{
-margin-top:10px;
-font-size:15px;
 color:#666;
-line-height:1.5;
+line-height:1.6;
+margin-top:8px;
+}
+
+.subtitulo{
+font-size:24px;
+margin-top:25px;
+margin-bottom:15px;
+}
+
+.lista{
+margin-top:15px;
+}
+
+.item{
+padding:18px 0;
+border-bottom:1px solid #eee;
+}
+
+.item:last-child{
+border-bottom:none;
+}
+
+.item strong{
+font-size:18px;
+display:block;
+margin-bottom:6px;
+}
+
+.badge{
+display:inline-block;
+background:#f2f2f2;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+margin-top:8px;
+margin-right:8px;
+}
+
+.hotel-img{
+width:100%;
+border-radius:18px;
+margin-top:15px;
+margin-bottom:10px;
 }
 
 .whatsapp{
@@ -87,9 +168,26 @@ color:white;
 padding:16px 22px;
 border-radius:999px;
 text-decoration:none;
-font-weight:bold;
 font-size:14px;
-box-shadow:0 5px 20px rgba(0,0,0,0.25);
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+@media(max-width:768px){
+
+.familia-box{
+flex-direction:column;
+text-align:center;
+}
+
+.familia-texto h1{
+font-size:26px;
+}
+
+.card h2{
+font-size:24px;
+}
+
 }
 
 </style>
@@ -99,7 +197,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.25);
 
 <div class="container">
 
-<div class="header">
+<div class="topo">
 
 <img src="logo.PNG" class="logo">
 
@@ -107,65 +205,351 @@ box-shadow:0 5px 20px rgba(0,0,0,0.25);
 BY NANDA
 </div>
 
+<div class="slogan">
+Sua viagem no seu bolso!
 </div>
 
-<input 
-type="text" 
-class="search" 
+<div class="familia-box">
+
+<img src="familia.HEIC" class="familia-img">
+
+<div class="familia-texto">
+
+<h1>BOA VIAGEM!!!</h1>
+
+<h2>ORLANDO 2026 • 28/09 a 18/10</h2>
+
+<p>
+Aproveitem cada momento dessa experiência especial.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<input
+type="text"
+class="search"
+id="searchInput"
 placeholder="Buscar restaurantes, parques, hotéis..."
 >
 
-<div class="card">
+<!-- HOTEL -->
+
+<div class="card searchable">
+
 <h2>🏨 Hotel</h2>
+
 <p>
-Veja informações, fotos e localização do seu hotel.
+Rose Inn At Pointe Orlando
 </p>
+
+<p>
+Localização excelente na International Drive, próximo aos parques, restaurantes e outlets.
+</p>
+
+<p>
+9000 International Dr, Orlando, FL 32819
+</p>
+
+<img src="hotel1.JPG" class="hotel-img">
+<img src="hotel2.JPG" class="hotel-img">
+<img src="hotel3.JPG" class="hotel-img">
+
+<div class="badge">Check-in: 16h</div>
+<div class="badge">Check-out: 11h</div>
+<div class="badge">Piscina</div>
+<div class="badge">Wi-Fi</div>
+
 </div>
 
-<div class="card">
-<h2>🍽 Restaurantes</h2>
-<p>
-Melhores restaurantes selecionados para sua viagem.
-</p>
+<!-- RESTAURANTES -->
+
+<div class="card searchable">
+
+<h2>🍽️ Restaurantes</h2>
+
+<div class="lista">
+
+<div class="item">
+<strong>Camila’s Restaurant</strong>
+Buffet brasileiro famoso entre turistas brasileiros.
+<br>
+<span class="badge">Brasileiro</span>
+<span class="badge">$$</span>
 </div>
 
-<div class="card">
-<h2>🛍 Compras</h2>
-<p>
-Shoppings, outlets e lojas recomendadas.
-</p>
+<div class="item">
+<strong>Fogo de Chão</strong>
+Churrascaria premium brasileira.
+<br>
+<span class="badge">Premium</span>
+<span class="badge">$$$$</span>
 </div>
 
-<div class="card">
+<div class="item">
+<strong>Mrs Potato</strong>
+Batatas recheadas gigantes e famosas.
+<br>
+<span class="badge">Brasileiro</span>
+<span class="badge">$$</span>
+</div>
+
+<div class="item">
+<strong>LongHorn Steakhouse</strong>
+Carnes americanas famosas e excelente custo-benefício.
+<br>
+<span class="badge">Steakhouse</span>
+<span class="badge">$$$</span>
+</div>
+
+<div class="item">
+<strong>Olive Garden</strong>
+Restaurante italiano muito famoso entre brasileiros.
+<br>
+<span class="badge">Italiano</span>
+<span class="badge">$$</span>
+</div>
+
+<div class="item">
+<strong>Kres Chophouse</strong>
+Steakhouse sofisticada e elegante.
+<br>
+<span class="badge">Luxo</span>
+<span class="badge">$$$$</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- COMPRAS -->
+
+<div class="card searchable">
+
+<h2>🛍️ Compras</h2>
+
+<div class="lista">
+
+<div class="item">
+<strong>Florida Mall</strong>
+Shopping completo e muito procurado por brasileiros.
+</div>
+
+<div class="item">
+<strong>Mall at Millenia</strong>
+Shopping premium com lojas de luxo.
+</div>
+
+<div class="item">
+<strong>Premium Outlet Vineland</strong>
+Outlet premium com grandes marcas.
+</div>
+
+<div class="item">
+<strong>Premium Outlet International Drive</strong>
+Outlet mais famoso de Orlando.
+</div>
+
+<div class="item">
+<strong>Ross</strong>
+Roupas, malas e produtos baratos.
+</div>
+
+<div class="item">
+<strong>Marshalls</strong>
+Loja favorita dos brasileiros.
+</div>
+
+<div class="item">
+<strong>Five Below</strong>
+Produtos baratos e divertidos.
+</div>
+
+<div class="item">
+<strong>Dollar Tree</strong>
+Tudo muito barato.
+</div>
+
+<div class="item">
+<strong>Walmart</strong>
+Mercado completo e excelente para compras.
+</div>
+
+<div class="item">
+<strong>Target</strong>
+Mercado premium e organizado.
+</div>
+
+<div class="item">
+<strong>CVS</strong>
+Farmácia e conveniência.
+</div>
+
+<div class="item">
+<strong>Walgreens</strong>
+Farmácia e emergência.
+</div>
+
+</div>
+
+</div>
+
+<!-- PARQUES -->
+
+<div class="card searchable">
+
 <h2>🎢 Parques</h2>
+
+<div class="lista">
+
+<div class="item">
+<strong>Magic Kingdom</strong>
+Parque mais clássico e mágico da Disney.
+</div>
+
+<div class="item">
+<strong>EPIC Universe</strong>
+Novo parque tecnológico e imersivo da Universal.
+</div>
+
+<div class="item">
+<strong>Hollywood Studios</strong>
+Star Wars e Toy Story.
+</div>
+
+<div class="item">
+<strong>EPCOT</strong>
+Tecnologia e países do mundo.
+</div>
+
+<div class="item">
+<strong>Animal Kingdom</strong>
+Avatar e natureza.
+</div>
+
+<div class="item">
+<strong>Islands of Adventure</strong>
+Parque mais radical da Universal.
+</div>
+
+</div>
+
+</div>
+
+<!-- CAFÉ -->
+
+<div class="card searchable">
+
+<h2>☕ Café da manhã</h2>
+
+<div class="lista">
+
+<div class="item">
+<strong>Hash House A Go Go</strong>
+Café americano famoso com pratos gigantes.
+</div>
+
+<div class="item">
+<strong>Keke’s Breakfast Cafe</strong>
+Breakfast clássico americano.
+</div>
+
+<div class="item">
+<strong>IHOP</strong>
+Panquecas e café americano tradicional.
+</div>
+
+<div class="item">
+<strong>Camila’s Restaurant</strong>
+Café da manhã brasileiro.
+</div>
+
+<div class="item">
+<strong>Seabra Foods</strong>
+Mercado brasileiro com padaria brasileira.
+</div>
+
+<div class="item">
+<strong>The Glass Knife</strong>
+Cafeteria premium e instagramável.
+</div>
+
+</div>
+
+</div>
+
+<!-- DICAS -->
+
+<div class="card searchable">
+
+<h2>✨ Dicas da Nanda</h2>
+
 <p>
-Ingressos, horários e dicas dos parques.
+Orlando vai muito além dos parques.
 </p>
-</div>
 
-<div class="card">
-<h2>☕ Cafés</h2>
 <p>
-Cafeterias especiais e experiências locais.
+Se tiver um dia livre, vale muito conhecer lugares charmosos como:
 </p>
+
+<div class="lista">
+
+<div class="item">
+<strong>Celebration</strong>
+Cidade planejada pela Disney com clima de filme americano.
 </div>
 
-<div class="card">
-<h2>📍 Dicas da Nanda</h2>
-<p>
-Recomendações exclusivas para aproveitar melhor sua viagem.
+<div class="item">
+<strong>Winter Garden</strong>
+Região charmosa com cafés, restaurantes e ruas lindas.
+</div>
+
+</div>
+
+<p style="margin-top:20px;">
+Reserve pelo menos um período da viagem para desacelerar e viver uma Orlando mais tranquila e especial.
 </p>
-</div>
 
 </div>
 
-<a 
-class="whatsapp" 
+</div>
+
+<a
+class="whatsapp"
 href="https://wa.me/5531993627389"
 target="_blank"
 >
-WhatsApp Concierge
+Falar com a Nanda
 </a>
+
+<script>
+
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('keyup', function(){
+
+const termo = searchInput.value.toLowerCase();
+
+const cards = document.querySelectorAll('.searchable');
+
+cards.forEach(card => {
+
+const texto = card.innerText.toLowerCase();
+
+if(texto.includes(termo)){
+card.style.display = 'block';
+}else{
+card.style.display = 'none';
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
