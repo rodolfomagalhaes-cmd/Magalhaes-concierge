@@ -1,1 +1,576 @@
-teste
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Magalhães Viagens by Nanda</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#f6f4ef;
+padding:20px;
+color:#1a1a1a;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.topo{
+text-align:center;
+margin-top:20px;
+margin-bottom:30px;
+}
+
+.logo{
+width:170px;
+margin-bottom:12px;
+}
+
+.by{
+letter-spacing:4px;
+font-size:13px;
+color:#777;
+margin-bottom:18px;
+}
+
+.slogan{
+font-size:28px;
+font-weight:bold;
+color:#111;
+margin-bottom:30px;
+white-space:nowrap;
+}
+
+.familia-box{
+background:white;
+border-radius:28px;
+padding:25px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.familia-img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #f2f2f2;
+}
+
+.familia-texto{
+text-align:left;
+}
+
+.familia-texto h1{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.familia-texto h2{
+font-size:20px;
+margin-bottom:10px;
+color:#444;
+}
+
+.familia-texto p{
+color:#666;
+line-height:1.5;
+}
+
+.card{
+background:white;
+padding:24px;
+border-radius:24px;
+margin-bottom:18px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+cursor:pointer;
+}
+
+.card h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#666;
+}
+
+.conteudo{
+display:none;
+background:white;
+padding:25px;
+border-radius:24px;
+margin-top:-8px;
+margin-bottom:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.item{
+padding:20px 0;
+border-bottom:1px solid #eee;
+}
+
+.item:last-child{
+border-bottom:none;
+}
+
+.item strong{
+display:block;
+font-size:20px;
+margin-bottom:10px;
+}
+
+.item p{
+color:#666;
+line-height:1.7;
+margin-bottom:10px;
+}
+
+.badge{
+display:inline-block;
+background:#f2f2f2;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+margin-right:8px;
+margin-top:6px;
+}
+
+.hotel-img{
+width:100%;
+border-radius:18px;
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:black;
+color:white;
+padding:16px 22px;
+border-radius:999px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+@media(max-width:768px){
+
+.slogan{
+font-size:20px;
+white-space:normal;
+}
+
+.familia-box{
+flex-direction:column;
+text-align:center;
+}
+
+.familia-texto{
+text-align:center;
+}
+
+.familia-texto h1{
+font-size:25px;
+}
+
+.card h2{
+font-size:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="topo">
+
+<img src="logo.PNG" class="logo">
+
+<div class="by">
+BY NANDA
+</div>
+
+<div class="slogan">
+SUA VIAGEM NO SEU BOLSO
+</div>
+
+<div class="familia-box">
+
+<img src="familia.HEIC" class="familia-img">
+
+<div class="familia-texto">
+
+<h1>BOA VIAGEM!!!</h1>
+
+<h2>ORLANDO 2026 • 28/09 a 18/10</h2>
+
+<p>
+Aproveitem cada momento dessa experiência especial.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HOTEL -->
+
+<div class="card" onclick="toggleSection('hotel')">
+<h2>🏨 Hotel</h2>
+<p>Toque para visualizar informações do hotel.</p>
+</div>
+
+<div id="hotel" class="conteudo">
+
+<div class="item">
+
+<strong>Rose Inn At Pointe Orlando</strong>
+
+<p>
+9000 International Dr, Orlando, FL 32819
+</p>
+
+<p>
+Excelente localização na International Drive, próximo aos parques, restaurantes e outlets.
+</p>
+
+<p>
+Ótimo custo-benefício para famílias.
+</p>
+
+<span class="badge">Check-in 16h</span>
+<span class="badge">Check-out 11h</span>
+<span class="badge">Piscina</span>
+<span class="badge">Wi-Fi</span>
+
+<img src="hotel1.JPG" class="hotel-img">
+<img src="hotel2.JPG" class="hotel-img">
+<img src="hotel3.JPG" class="hotel-img">
+
+</div>
+
+</div>
+
+<!-- RESTAURANTES -->
+
+<div class="card" onclick="toggleSection('restaurantes')">
+<h2>🍽️ Restaurantes</h2>
+<p>Toque para ver recomendações.</p>
+</div>
+
+<div id="restaurantes" class="conteudo">
+
+<div class="item">
+<strong>Camila’s Restaurant</strong>
+<p>Buffet brasileiro muito famoso entre turistas brasileiros.</p>
+<p>5458 International Dr, Orlando, FL 32819</p>
+<span class="badge">Brasileiro</span>
+<span class="badge">$$</span>
+</div>
+
+<div class="item">
+<strong>Fogo de Chão</strong>
+<p>Churrascaria premium brasileira.</p>
+<p>8282 International Dr, Orlando, FL 32819</p>
+<span class="badge">Premium</span>
+<span class="badge">$$$$</span>
+</div>
+
+<div class="item">
+<strong>Mrs Potato</strong>
+<p>Batatas recheadas gigantes e muito famosas.</p>
+<p>4550 S Kirkman Rd, Orlando, FL 32811</p>
+<span class="badge">Brasileiro</span>
+<span class="badge">$$</span>
+</div>
+
+<div class="item">
+<strong>LongHorn Steakhouse</strong>
+<p>Carnes americanas famosas e excelente custo-benefício.</p>
+<p>8351 International Dr, Orlando, FL 32819</p>
+<span class="badge">Steakhouse</span>
+<span class="badge">$$$</span>
+</div>
+
+<div class="item">
+<strong>Olive Garden</strong>
+<p>Italiano casual muito famoso entre brasileiros.</p>
+<p>8984 International Dr, Orlando, FL 32819</p>
+<span class="badge">Italiano</span>
+<span class="badge">$$</span>
+</div>
+
+</div>
+
+<!-- COMPRAS -->
+
+<div class="card" onclick="toggleSection('compras')">
+<h2>🛍️ Compras</h2>
+<p>Toque para ver shoppings, outlets e lojas.</p>
+</div>
+
+<div id="compras" class="conteudo">
+
+<div class="item">
+<strong>Florida Mall</strong>
+<p>Shopping completo muito procurado por brasileiros.</p>
+<p>8001 S Orange Blossom Trail, Orlando, FL 32809</p>
+</div>
+
+<div class="item">
+<strong>Mall at Millenia</strong>
+<p>Shopping premium com lojas de luxo.</p>
+<p>4200 Conroy Rd, Orlando, FL 32839</p>
+</div>
+
+<div class="item">
+<strong>Premium Outlet Vineland</strong>
+<p>Outlet premium com grandes marcas.</p>
+<p>8200 Vineland Ave, Orlando, FL 32821</p>
+</div>
+
+<div class="item">
+<strong>Premium Outlet International Drive</strong>
+<p>Outlet mais famoso de Orlando.</p>
+<p>4951 International Dr, Orlando, FL 32819</p>
+</div>
+
+<div class="item">
+<strong>Ross</strong>
+<p>Roupas, malas e produtos baratos.</p>
+<p>Diversas unidades em Orlando.</p>
+</div>
+
+<div class="item">
+<strong>Marshalls</strong>
+<p>Loja favorita dos brasileiros.</p>
+<p>Diversas unidades em Orlando.</p>
+</div>
+
+<div class="item">
+<strong>Five Below</strong>
+<p>Produtos baratos e divertidos.</p>
+<p>5295 International Dr, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>Dollar Tree</strong>
+<p>Tudo muito barato.</p>
+<p>Diversas unidades em Orlando.</p>
+</div>
+
+<div class="item">
+<strong>Walmart</strong>
+<p>Mercado completo e excelente para compras.</p>
+<p>8990 Turkey Lake Rd, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>Target</strong>
+<p>Mercado premium e organizado.</p>
+<p>11619 Daryl Carter Pkwy, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>CVS</strong>
+<p>Farmácia e conveniência.</p>
+<p>Diversas unidades em Orlando.</p>
+</div>
+
+<div class="item">
+<strong>Walgreens</strong>
+<p>Farmácia e emergência.</p>
+<p>Diversas unidades em Orlando.</p>
+</div>
+
+</div>
+
+<!-- PARQUES -->
+
+<div class="card" onclick="toggleSection('parques')">
+<h2>🎢 Parques</h2>
+<p>Toque para ver informações dos parques.</p>
+</div>
+
+<div id="parques" class="conteudo">
+
+<div class="item">
+<strong>Magic Kingdom</strong>
+<p>O parque mais clássico e mágico da Disney.</p>
+<p>1180 Seven Seas Dr, Lake Buena Vista, FL</p>
+</div>
+
+<div class="item">
+<strong>EPIC Universe</strong>
+<p>Novo parque tecnológico e imersivo da Universal.</p>
+<p>Universal Blvd, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>Hollywood Studios</strong>
+<p>Star Wars e Toy Story.</p>
+<p>351 S Studio Dr, Lake Buena Vista, FL</p>
+</div>
+
+<div class="item">
+<strong>EPCOT</strong>
+<p>Tecnologia e países do mundo.</p>
+<p>200 Epcot Center Dr, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>Animal Kingdom</strong>
+<p>Avatar e natureza.</p>
+<p>2901 Osceola Pkwy, Orlando, FL</p>
+</div>
+
+</div>
+
+<!-- CAFÉ -->
+
+<div class="card" onclick="toggleSection('cafe')">
+<h2>☕ Café da manhã</h2>
+<p>Toque para ver cafés e brunchs.</p>
+</div>
+
+<div id="cafe" class="conteudo">
+
+<div class="item">
+<strong>Hash House A Go Go</strong>
+<p>Café americano famoso com pratos gigantes.</p>
+<p>5350 International Dr, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>Keke’s Breakfast Cafe</strong>
+<p>Breakfast clássico americano.</p>
+<p>Diversas unidades em Orlando.</p>
+</div>
+
+<div class="item">
+<strong>IHOP</strong>
+<p>Panquecas e café americano tradicional.</p>
+<p>Diversas unidades em Orlando.</p>
+</div>
+
+<div class="item">
+<strong>Camila’s Restaurant</strong>
+<p>Café da manhã brasileiro.</p>
+<p>5458 International Dr, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>Seabra Foods</strong>
+<p>Mercado brasileiro com padaria brasileira.</p>
+<p>5571 International Dr, Orlando, FL</p>
+</div>
+
+<div class="item">
+<strong>The Glass Knife</strong>
+<p>Cafeteria premium e instagramável.</p>
+<p>276 S Orlando Ave, Winter Park, FL</p>
+</div>
+
+</div>
+
+<!-- DICAS -->
+
+<div class="card" onclick="toggleSection('dicas')">
+<h2>✨ Dicas da Nanda</h2>
+<p>Toque para ver dicas especiais.</p>
+</div>
+
+<div id="dicas" class="conteudo">
+
+<div class="item">
+
+<strong>Celebration</strong>
+
+<p>
+Cidade planejada pela Disney com clima de filme americano.
+</p>
+
+<p>
+Excelente para caminhar, tomar café e relaxar.
+</p>
+
+<img src="celebration1.JPG" class="hotel-img">
+<img src="celebration2.JPG" class="hotel-img">
+
+</div>
+
+<div class="item">
+
+<strong>Winter Garden</strong>
+
+<p>
+Região charmosa com cafés, restaurantes e ruas lindas.
+</p>
+
+<p>
+Ótimo passeio para fugir um pouco dos parques.
+</p>
+
+<img src="wintergarden.PNG" class="hotel-img">
+
+</div>
+
+</div>
+
+</div>
+
+<a
+class="whatsapp"
+href="https://wa.me/5531993627389"
+target="_blank"
+>
+Falar com a Nanda
+</a>
+
+<script>
+
+function toggleSection(id){
+
+const section = document.getElementById(id);
+
+if(section.style.display === "block"){
+section.style.display = "none";
+}else{
+section.style.display = "block";
+section.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+}
+
+}
+
+</script>
+
+</body>
+</html>
